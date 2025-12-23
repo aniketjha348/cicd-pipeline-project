@@ -1,0 +1,59 @@
+import {
+  CheckCircle,
+  XCircle,
+  Info,
+  AlertTriangle,
+  Loader2,
+} from "lucide-react";
+import { toast as useToast } from "sonner";
+import { cn } from "@/lib/utils";
+
+// Define all allowed toast types
+type ToastType = "success" | "error" | "info" | "warning" | "loading";
+
+// Toast icon mapping
+export const toastIcons: Record<ToastType, JSX.Element> = {
+  success: <CheckCircle className="text-green-500 w-5 h-5" />,
+  error: <XCircle className="text-red-500 w-5 h-5" />,
+  info: <Info className="text-blue-500 w-5 h-5" />,
+  warning: <AlertTriangle className="text-yellow-500 w-5 h-5" />,
+  loading: <Loader2 className="animate-spin text-muted-foreground w-5 h-5" />,
+};
+
+// Props type for the toast function
+interface ToastProps {
+  title?: string;
+  description?: string;
+  toastType?: ToastType;
+  varient?:string;
+}
+
+// Toast function
+export const toast = ({
+  title = "",
+  description = "",
+  toastType = "success",
+}: ToastProps = {}) => {
+  useToast.custom((e) => (
+    <div className="rounded-md min-w-[200px] sm:min-w-[300px] lg:min-w-[400px] md:min-w-[350px] flex gap-3 items-center border border-border bg-white dark:bg-slate-900 p-2 shadow-md text-slate-900 dark:text-white">
+      {toastIcons[toastType]}
+      <span
+        className={cn(
+          "flex flex-col",
+          toastType === "error"
+            ? "text-red-500"
+            : toastType === "success"
+            ? "text-green-500"
+            : toastType === "info"
+            ? "text-blue-500"
+            : toastType === "warning"
+            ? "text-yellow-500"
+            : ""
+        )}
+      >
+        <p className="text-md font-semibold">{title}</p>
+        <p className="text-sm">{description}</p>
+      </span>
+    </div>
+  ));
+};

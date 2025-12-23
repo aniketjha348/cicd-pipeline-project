@@ -1,0 +1,23 @@
+on:
+  push:
+    branches: [main]
+
+env:
+  PORT: ${{ secrets.PORT }}
+  NODE_ENV: ${{ secrets.NODE_ENV }}
+  MONGO_URI: ${{ secrets.MONGO_URI }}
+  ACCESS_TOKEN_SECRET: ${{ secrets.ACCESS_TOKEN_SECRET }}
+  REFRESH_TOKEN_SECRET: ${{ secrets.REFRESH_TOKEN_SECRET }}
+  BASE_URL: ${{ secrets.BASE_URL }}
+  CLIENT_URL: ${{ secrets.CLIENT_URL }}
+
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout code      
+      uses: actions/checkout@v4
+    - name: Run and build backend container
+      run: docker compose up -d
+   
+        

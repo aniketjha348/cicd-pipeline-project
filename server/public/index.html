@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College ID Card Generator & Admin Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <!-- Inline SVG Logo for IDGenius -->
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
+                    <path d="M18 2H6C4.89543 2 4 2.89543 4 4V20C4 21.1046 4.89543 22 6 22H18C19.1046 22 20 21.1046 20 20V4C20 2.89543 19.1046 2 18 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M16 7H8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M16 11H8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 15H8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="16" cy="15" r="2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>IDGenius</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#cta">Get Started</a></li>
+                <li><a href="https://example.com/original-site" target="_blank" class="original-site-link">Original Site <i class="fas fa-external-link-alt"></i></a></li>
+            </ul>
+            <button class="menu-toggle" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="hero-content">
+            <!-- Replaced generic server icon with a relevant ID card icon -->
+            <i class="fas fa-id-card icon-hero animate-fade-in-up"></i>
+            <h1 class="animate-fade-in-up">Streamline ID Card Management for Your College</h1>
+            <p class="animate-fade-in-up delay-1">Secure, efficient, and customizable platform for student ID generation and administration.</p>
+            <div class="hero-buttons animate-fade-in-up delay-2">
+                <a href="#features" class="btn primary-btn">Explore Features</a>
+                <a href="#cta" class="btn secondary-btn">Request a Demo</a>
+            </div>
+        </div>
+        <div class="hero-animation-overlay"></div>
+    </header>
+
+    <section id="features" class="features-section hidden-section">
+        <div class="container">
+            <h2 class="section-title">Key Modules & Features</h2>
+            <div class="feature-grid">
+                <div class="feature-item animate-fade-in-up delay-3">
+                    <i class="fas fa-shield-alt icon-large"></i>
+                    <h3>Authentication & RBAC</h3>
+                    <p>Secure login with role-based access for Admin, Faculty, and Students. Data integrity with password hashing.</p>
+                </div>
+                <div class="feature-item animate-fade-in-up delay-4">
+                    <i class="fas fa-tachometer-alt icon-large"></i>
+                    <h3>Admin Dashboard</h3>
+                    <p>Full control over colleges, departments, users, and comprehensive analytics for oversight.</p>
+                </div>
+                <div class="feature-item animate-fade-in-up delay-5">
+                    <i class="fas fa-chalkboard-teacher icon-large"></i>
+                    <h3>Faculty Dashboard</h3>
+                    <p>Manage students within assigned departments, generate ID cards, and bulk import data.</p>
+                </div>
+                <div class="feature-item animate-fade-in-up delay-6">
+                    <i class="fas fa-user-graduate icon-large"></i>
+                    <h3>Student Dashboard</h3>
+                    <p>Students can view, download their ID cards, and request profile corrections.</p>
+                </div>
+                <div class="feature-item animate-fade-in-up delay-7">
+                    <i class="fas fa-palette icon-large"></i>
+                    <h3>ID Card Template Designer</h3>
+                    <p>Intuitive drag-and-drop builder to customize ID card layouts with logos, fields, and backgrounds.</p>
+                </div>
+                <div class="feature-item animate-fade-in-up delay-8">
+                    <i class="fas fa-print icon-large"></i>
+                    <h3>ID Card Generation & Export</h3>
+                    <p>Generate individual or bulk ID cards in PDF/PNG/JPG formats, ready for print or digital use.</p>
+                </div>
+                <div class="feature-item animate-fade-in-up delay-9">
+                    <i class="fas fa-mobile-alt icon-large"></i>
+                    <h3>Responsive UI & Dark/Light Mode</h3>
+                    <p>Beautiful, user-friendly interface optimized for all devices with optional dark/light themes.</p>
+                </div>
+                <div class="feature-item animate-fade-in-up delay-10">
+                    <i class="fas fa-clipboard-list icon-large"></i>
+                    <h3>Logs & Audit Trail</h3>
+                    <p>Track all user activities for accountability, security, and debugging purposes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="benefits" class="benefits-section hidden-section">
+        <div class="container">
+            <h2 class="section-title">Why Choose IDGenius?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item animate-fade-in-up delay-11">
+                    <i class="fas fa-cogs benefit-icon"></i>
+                    <h3>Streamlined Operations</h3>
+                    <p>Automate ID card creation and management, saving time and resources for your administration.</p>
+                </div>
+                <div class="benefit-item animate-fade-in-up delay-12">
+                    <i class="fas fa-lock benefit-icon"></i>
+                    <h3>Enhanced Security</h3>
+                    <p>Robust authentication and role-based access ensure data privacy and prevent unauthorized access.</p>
+                </div>
+                <div class="benefit-item animate-fade-in-up delay-13">
+                    <i class="fas fa-users-cog benefit-icon"></i>
+                    <h3>User-Friendly Design</h3>
+                    <p>Intuitive dashboards for Admins, Faculty, and Students make the system easy to adopt and use.</p>
+                </div>
+                <div class="benefit-item animate-fade-in-up delay-14">
+                    <i class="fas fa-chart-line benefit-icon"></i>
+                    <h3>Actionable Insights</h3>
+                    <p>Gain valuable analytics on card generation, downloads, and user activities to optimize processes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cta" class="cta-section hidden-section">
+        <div class="container">
+            <h2 class="section-title animate-fade-in-up delay-15">Ready to Transform Your ID Card System?</h2>
+            <p class="animate-fade-in-up delay-16">Contact us today to learn how IDGenius can benefit your college.</p>
+            <a href="#" class="btn primary-btn animate-fade-in-up delay-17">Get Started Now</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 IDGenius. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js" type="module"></script>
+</body>
+</html>
